@@ -1,20 +1,37 @@
 pipeline {
     agent any
+
     stages {
-        stage('---clean---') {
+        stage('Git') {
             steps {
-                sh "/opt/maven/bin/mvn clean"
+                echo 'Hello World'
             }
         }
-        stage('--test--') {
+        
+                stage('MVN CLEAN') {
             steps {
-                sh "/opt/maven/bin/mvn test"
+                echo 'Hello World'
             }
         }
-        stage('--package--') {
+        
+                stage('MVN TEST SONAR') {
             steps {
-                sh "/opt/maven/bin/mvn package"
+                echo 'Hello World'
             }
         }
+        
+                stage('MVN TEST JUNIT') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+                stage('MVN DEpLOY NEXUS') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+        
     }
 }
